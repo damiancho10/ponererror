@@ -18,17 +18,21 @@
     </style>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <tr>
             <td>
-                <input type="text" name="hombre" placeholder="Ingresar el nombre">
+                <label>Nombre</label>
+                <input type="text" name="hombre" placeholder="Ingresar el nombre" require>
             </td>
         </tr>
         <tr>
             <td>
-                <input type="email" name="correo" placeholder="Ingresar correo">
+
+            <label>correo</label>
+                <input type="email" name="correo" placeholder="Ingresar correo" require>
             </td>
         </tr>
+        <input type="submit" value="enviar">
 
     </form>
     
